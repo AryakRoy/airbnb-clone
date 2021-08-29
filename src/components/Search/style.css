@@ -1,0 +1,34 @@
+.search {
+  position: absolute;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.search > h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 559px;
+  padding: 10px;
+  background-color: white;
+}
+.search > input {
+  width: 539px;
+  height: 30px;
+  padding: 20px;
+  border: none;
+  outline: none;
+}
+.search > button {
+  text-transform: inherit !important;
+  background-color: #ff7779;
+  color: white;
+  width: 579px;
+}
+.search > button:hover {
+  color: #ff7779;
+  background-color: white;
+}
