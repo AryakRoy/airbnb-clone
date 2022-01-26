@@ -9,6 +9,7 @@ const Search = () => {
     const history = useHistory();
     const [startDate, setstartDate] = useState(new Date())
     const [endDate, setendDate] = useState(new Date())
+    const [numOfPeople, setNumOfPeople] = useState(2)
     const selectionRange = {
         startDate: startDate,
         endDate: endDate,
@@ -22,9 +23,17 @@ const Search = () => {
         <div className="search">
             <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
             <h2>Number of People</h2>
-            <input type="number" defaultValue={2} min={0} />
-            <Button onClick={() => history.push("/search")}>Search Airbnb</Button>
-        </div>
+            <input type="number" value={numOfPeople} defaultValue={2} min={0} onChange={(event) => setNumOfPeople(event.target.value)} />
+            <Button
+                onClick={() => history.push("/search", {
+                    start: startDate,
+                    end: endDate,
+                    numOfPeople: numOfPeople,
+                })}
+            >
+                Search Airbnb
+            </Button>
+        </div >
     )
 }
 

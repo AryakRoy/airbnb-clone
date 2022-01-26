@@ -8,12 +8,13 @@
   cursor: pointer;
 }
 .card:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
 }
 .card > img {
   object-fit: fill;
   min-width: 300px;
   min-height: 200px;
+  height: 400px;
   width: 100%;
 }
 .card__info {
@@ -26,9 +27,13 @@
   font-size: 18px;
   font-weight: 600;
 }
-.card__info > h4 {
+.card__info > p {
   font-size: 14px;
   font-family: 300;
   margin-top: 8px;
   margin-bottom: 8px;
+  color: #a5a5a5;
+}
+.card__info > h3 {
+  color: #5e5e5e;
 }

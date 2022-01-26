@@ -2,7 +2,7 @@ import React from 'react'
 import "./style.css"
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import StarIcon from "@material-ui/icons/Star";
-
+import { IconButton } from '@material-ui/core';
 const SearchResult = ({
     src,
     location,
@@ -10,12 +10,16 @@ const SearchResult = ({
     description,
     star,
     price,
-    total
+    days
 }) => {
     return (
         <div className="searchResult">
             <img src={src} alt={title} />
-            <FavoriteBorderIcon className="searchResult__icon" />
+            <div className="searchResult__icon">
+                <IconButton>
+                    <FavoriteBorderIcon />
+                </IconButton>
+            </div>
             <div className="searchResult__info">
                 <div className="searchResult__infoTop">
                     <p>{location}</p>
@@ -31,8 +35,8 @@ const SearchResult = ({
                         </p>
                     </div>
                     <div className="searchResult__price">
-                        <h2>{price}</h2>
-                        <p>{total}</p>
+                        <h2>₹{price} / night</h2>
+                        <p>₹{price * days} per person</p>
                     </div>
                 </div>
             </div>
