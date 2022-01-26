@@ -9,12 +9,12 @@ Check Out the Project Right here 👉🏼
 
 ## Development Stack
 
-![TechStack Banner](/src/assets/techstack.png)
-
 - [React](https://reactjs.org/)
 - [react-router](https://v5.reactrouter.com/web/guides/quick-start)
 - [material-ui](https://mui.com/)
 - [Firebase](https://firebase.google.com/)
+
+![TechStack Banner](/src/assets/techstack.png)
 
 ## Installation
 
